@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.example.backend.data.UserModel" />
+
+        <variable
+            name="user"
+            type="UserModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="15dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        tools:context=".ui.fragments.details.DetailsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/baseline_mode_edit_outline_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/appCompatImageView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:image="@{user.component6()}"
+                android:padding="20dp"
+                android:src="@mipmap/ic_launcher"
+                android:transitionName="image_to"
+                app:layout_constraintEnd_toEndOf="@+id/iv_edit"
+                app:layout_constraintStart_toStartOf="@+id/iv_edit"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/llUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/appCompatImageView"
+                app:layout_constraintStart_toStartOf="@+id/appCompatImageView"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatImageView">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="50dp"
+                    android:fontFamily="@font/font_gordita_regular"
+                    android:gravity="start"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:text="Username: "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:enabled="false"
+                    android:fontFamily="@font/font_gordita_regular"
+                    android:inputType="text"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:text="@{user.component2()}"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/llUsername"
+                app:layout_constraintStart_toStartOf="@+id/llUsername"
+                app:layout_constraintTop_toBottomOf="@+id/llUsername">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="50dp"
+                    android:fontFamily="@font/font_gordita_regular"
+                    android:gravity="start"
+                    android:text="First Name: "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:enabled="false"
+                    android:fontFamily="@font/font_gordita_regular"
+                    android:maxLength="18"
+                    android:text="@{user.component3()}"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/llFirstName"
+                app:layout_constraintStart_toStartOf="@+id/llFirstName"
+                app:layout_constraintTop_toBottomOf="@+id/llFirstName">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="50dp"
+                    android:fontFamily="@font/font_gordita_regular"
+                    android:gravity="start"
+                    android:text="Last Name: "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:enabled="false"
+                    android:fontFamily="@font/font_gordita_regular"
+                    android:maxLength="18"
+                    android:text="@{user.component4()}"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/llLastName"
+                app:layout_constraintStart_toStartOf="@+id/llLastName"
+                app:layout_constraintTop_toBottomOf="@+id/llLastName">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="50dp"
+                    android:fontFamily="@font/font_gordita_regular"
+                    android:gravity="start"
+                    android:text="Age: "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etAge"
+                    intText="@{user.component5()}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:enabled="false"
+                    android:fontFamily="@font/font_gordita_regular"
+                    android:inputType="numberDecimal"
+                    android:maxLength="18"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="30dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:fontFamily="@font/font_gordita_regular"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp"
+                android:text="Save Changes"
+                android:visibility="invisible"
+                app:cornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/llAge"
+                app:layout_constraintStart_toStartOf="@+id/llAge"
+                app:layout_constraintTop_toBottomOf="@+id/llAge" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
