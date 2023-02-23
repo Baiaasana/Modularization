@@ -23,7 +23,6 @@ class DetailsFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val args: DetailsFragmentArgs by navArgs()
-
     private val viewModel: ListViewModel by navGraphViewModels(R.id.main_nav_graph) { ListViewModel.Factory }
 
     override fun onCreateView(
@@ -56,7 +55,8 @@ class DetailsFragment : Fragment() {
         }
         btnUpdate.setOnClickListener {
             updateInfo()
-            setDisabled(etAge, etFirstName, etLastName, etUsername, button = btnUpdate, imageView = ivEdit
+            setDisabled(
+                etAge, etFirstName, etLastName, etUsername, button = btnUpdate, imageView = ivEdit
             )
         }
     }
@@ -67,14 +67,12 @@ class DetailsFragment : Fragment() {
     }
 
     private fun updateInfo() = with(binding) {
-        viewModel.updateListItems(
-            item = user!!.apply {
-                username = etUsername.text.toString()
-                firstName = etFirstName.text.toString()
-                lastName = etLastName.text.toString()
-                age = etAge.text.toString().toInt()
-            }
-        )
+        viewModel.updateListItems(item = user!!.apply {
+            username = etUsername.text.toString()
+            firstName = etFirstName.text.toString()
+            lastName = etLastName.text.toString()
+            age = etAge.text.toString().toInt()
+        })
     }
 
     private fun setEnabled(vararg editText: AppCompatEditText, imageView: AppCompatImageView) {
@@ -89,9 +87,7 @@ class DetailsFragment : Fragment() {
     }
 
     private fun setDisabled(
-        vararg editText: AppCompatEditText,
-        button: AppCompatButton,
-        imageView: AppCompatImageView
+        vararg editText: AppCompatEditText, button: AppCompatButton, imageView: AppCompatImageView
     ) {
         for (i in editText) {
             i.isEnabled = false

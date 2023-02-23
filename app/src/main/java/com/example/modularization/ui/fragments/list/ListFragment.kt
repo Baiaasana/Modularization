@@ -24,8 +24,6 @@ class ListFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val userAdapter: UserAdapter = UserAdapter()
-
-//    private val viewModel: ListViewModel by viewModels { ListViewModel.Factory }
     private val viewModel: ListViewModel by navGraphViewModels(R.id.main_nav_graph) { ListViewModel.Factory }
 
     override fun onCreateView(

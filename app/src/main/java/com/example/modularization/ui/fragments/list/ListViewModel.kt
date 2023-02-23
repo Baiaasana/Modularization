@@ -16,9 +16,6 @@ class ListViewModel(private val useCase: UserUseCase) : ViewModel() {
     private val _list = MutableLiveData<List<UserModel>>()
     val list: LiveData<List<UserModel>> = _list
 
-    private val _user = MutableLiveData<UserModel>()
-    val user :LiveData<UserModel> = _user
-
     fun getList() {
         _list.value = useCase.invoke()
     }
@@ -35,7 +32,6 @@ class ListViewModel(private val useCase: UserUseCase) : ViewModel() {
         }
         _list.value = list!!
     }
-
 
     companion object {
 
