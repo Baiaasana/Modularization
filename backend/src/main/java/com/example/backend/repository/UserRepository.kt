@@ -7,7 +7,7 @@ class UserRepository {
     private var list = mutableListOf(
         UserModel(
             0,
-            "True Detective",
+            "True detective",
             "Matthew ",
             "Mcconaughey",
             53,
@@ -17,7 +17,7 @@ class UserRepository {
             0,
             "User_1",
             "FirstName_1 ",
-            "mcconaughey",
+            "Lastname_1",
             53,
             "https://static.dw.com/image/63743885_605.jpg"
         ),
@@ -31,49 +31,49 @@ class UserRepository {
         ),
         UserModel(
             0,
-            "User_0",
-            "FirstName_0 ",
-            "Lastname_2",
+            "User_3",
+            "FirstName_3 ",
+            "Lastname_3",
             53,
             "https://media.licdn.com/dms/image/C5612AQFw1LK_ST0ykw/article-cover_image-shrink_600_2000/0/1520107063637?e=2147483647&v=beta&t=rjQwSHfgkPZUPHes5TXYfDRV5pgdpswWpVy_IJqc3pU"
         ),
         UserModel(
             0,
-            "User_0",
-            "FirstName_0 ",
-            "Lastname_2",
+            "User_4",
+            "FirstName_4",
+            "Lastname_4",
             53,
             "https://toptemebi.files.wordpress.com/2015/03/post-29-1357046294.jpg"
         ),
         UserModel(
             0,
-            "User_0",
-            "FirstName_0 ",
-            "Lastname_2",
+            "User_5",
+            "FirstName_5",
+            "Lastname_5",
             53,
             "https://storage.googleapis.com/feedc_v1_largepostimages/MjI4NTEzX3Bvc3RfMTU5ODA5MzIyOA==.jpeg"
         ),
         UserModel(
             0,
-            "User_0",
-            "FirstName_0 ",
-            "Lastname_2",
+            "User_6",
+            "FirstName_6",
+            "Lastname_6",
             53,
             "https://magma.ge/assets/tinyeditor/filemanager/files/images/images/crowd.jpg"
         ),
         UserModel(
             0,
-            "User_0",
-            "FirstName_0 ",
-            "Lastname_2",
+            "User_7",
+            "FirstName_7",
+            "Lastname_7",
             53,
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM3b4iQxTS7KwLBHlGTrasSxdZeQtWDEIGkQ&usqp=CAU"
         ),
         UserModel(
             0,
-            "User_0",
-            "FirstName_0 ",
-            "Lastname_2",
+            "User_8",
+            "FirstName_8",
+            "Lastname_8",
             53,
             "https://www.verywellhealth.com/thmb/KdpQtevrYHuhrAGxlIEQ_-AmjOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1205715037-a4668cfe1da44dc7822c16bdc0f6e854.jpg"
         )
